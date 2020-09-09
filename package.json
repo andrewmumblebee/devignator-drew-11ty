@@ -1,0 +1,19 @@
+{
+  "name": "devignator-drew-11ty",
+  "version": "1.0.0",
+  "description": "personal site of Andrew Harris",
+  "main": "index.js",
+  "scripts": {
+    "build": "eleventy",
+    "watch": "eleventy --watch",
+    "serve": "eleventy --serve",
+    "start": "eleventy --serve",
+    "debug": "DEBUG=* eleventy"
+  },
+  "keywords": [
+    "blog"
+  ],
+  "dependencies": {
+    "@11ty/eleventy": "^0.11.0"
+  }
+}
