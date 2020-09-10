@@ -4,10 +4,15 @@
   "description": "personal site of Andrew Harris",
   "main": "index.js",
   "scripts": {
-    "build": "eleventy",
+    "serve": "yarn dev",
+    "start": "yarn dev",
+    "build": "npm-run-all --parallel build:*",
+    "build:11ty": "eleventy",
+    "build:css": "parcel build src/css/* --out-dir _site",
+    "dev": "npm-run-all --parallel dev:*",
+    "dev:11ty": "eleventy --serve",
+    "dev:css": "parcel src/css/* --out-dir _site",
     "watch": "eleventy --watch",
-    "serve": "eleventy --serve",
-    "start": "eleventy --serve",
     "debug": "DEBUG=* eleventy"
   },
   "keywords": [
