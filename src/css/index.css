@@ -1,0 +1,29 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@font-face {
+  font-family: "Made Gentle";
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/MADE-Gentle.woff2") format("woff2");
+  font-display: swap;
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: "Made Gentle";
+}
+
+body {
+  @apply text-white bg-gunmetal;
+}
+
+.header {
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  position: absolute;
+}
