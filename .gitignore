@@ -3,3 +3,4 @@ _site
 .cache
 dist
 yarn-error.log
+_includes/index.compiled.css

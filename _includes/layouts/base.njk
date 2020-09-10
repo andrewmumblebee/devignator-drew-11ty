@@ -6,7 +6,13 @@
     <title>{{ title or metadata.title }}</title>
     <meta name="description" content="{{ description or metadata.description }}">
     <link rel="preload" href="{{ '/fonts/MADE-Gentle.woff2' | url }}" type="font/woff2" as="font">
-    <link rel="stylesheet" href="{{ '/index.css' | url }}">
+
+    {% set css %}
+    {% include "index.compiled.css" %}
+    {% endset %}
+    <style>
+      {{css | safe}}
+    </style>
   </head>
   <body>
     <main {% if templateclass %} class="{{ templateClass }}" {% endif %}>
